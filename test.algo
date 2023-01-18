@@ -1,0 +1,32 @@
+ALGORITHM read a sentence
+VAR
+    i : INTEGER;
+    text : STRING;
+    nbr : INTEGER :=0;
+    sum : INTEGER := 0; 
+    mt : INTEGER :=0;
+BEGIN
+    Write("enter a sentence");
+    Read(text);
+
+    
+    FOR i FROM 0 TO text.length STEP 1  DO
+    IF (text[i]="a" || text[i]="e" || text[i]="i" || text[i]="o" || text[i]="u" || text[i]="y") THEN
+        nbr := nbr+1;
+    END_IF
+        Write ("votre phrase contient",nbr,"voyelle")
+    END_FOR
+
+    
+    FOR i FROM 0 TO text.length STEP 1  DO
+        sum := sum+1;
+        Write("La phrase contient",sum,"caractères")
+    END_FOR
+
+    FOR i FROM 0 TO i<=text.length STEP 1  DO
+        IF (text[i]==" ") THEN
+            mt = mt+1;
+        END_IF
+        Write("La phrase contient",mt+1,"mots")
+    END_FOR
+END
